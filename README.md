@@ -1,11 +1,13 @@
 # Introduction 
 FastAPI project template with custom shell script
-Supports relational and NoSQL.
+Actually using NoSql database, but will work with relational database
 Uses alembic for relational database migrations.
 
 # Planned
 - Docker file
 - HTTP Patch example
+- Paging example
+- Example with a relational database
 
 # Getting Started
 1.	Install pipenv
