@@ -2,10 +2,9 @@ from typing import List
 
 from fastapi import APIRouter, Depends
 
-from app.api.middleware.db_middleware import get_db
-from app.api.v1.routes import *
-from app.models.bar import Bar, BarContract
-from app.services.foo import bar_service
+from middleware import get_db
+from models import Bar, BarContract
+from foo import bar_service
 
 router = APIRouter()
 
