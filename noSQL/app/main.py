@@ -10,4 +10,6 @@ app = FastAPI()
 app.include_router(api_router)
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=os.getenv("PORT", 8000))
+    debug: bool = True if os.getenv("ENV", "dev") == "dev" else False
+    port: int = int(os.getenv("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port, reload=debug, debug=debug)
